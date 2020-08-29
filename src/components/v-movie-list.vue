@@ -1,7 +1,6 @@
 <template>
     <section class="movie">
         <ul class="movie__list">
-
             <v-movie-item
                     v-for="movie in filteredList"
                     :key="movie.id"
@@ -17,29 +16,16 @@
 
     export default {
         name: 'v-movie-list',
-        props: ['value'],
-        data() {
-            return {
-                movieFilteredList: ''
-            }
-        },
-        created: function() {
-            this.$parent.$on('update', this.setValue);
-        },
-        watch: {
-            // '$route': {
-            //     handler(route) {
-            //         this.movieFilteredList= route.meta.movieFilteredList
-            //     },
-            //     immediate: true
-            // }
-        },
         components: {
             vMovieItem
         },
         computed: {
+            movieFilteredList() {
+               return this.$store.getters.MOVIE_INPUT_DATA
+            },
             ...mapGetters([
-                'MOVIES'
+                'MOVIES',
+                'MOVIE_INPUT_DATA'
             ]),
             filteredList: function() {
                 let movie = this.movieFilteredList;

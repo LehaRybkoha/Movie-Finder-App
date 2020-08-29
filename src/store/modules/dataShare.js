@@ -1,27 +1,20 @@
 export default {
     state: {
-        value: ''
+        movieFilteredList: ''
     },
     actions: {
-        setInputAction: ({commit}, value) => {
-            commit("setInputAction", value);
-            //localStorage.setItem("value", value)
+        SET_INPUT_DATA: ({commit}, value) => {
+            commit("SET_INPUT_DATA", value);
         }
     },
     mutations: {
-        setInputAction(state, value) {
-            state.value = value;
+        SET_INPUT_DATA(state, value) {
+            state.movieFilteredList = value;
         }
     },
     getters: {
         MOVIE_INPUT_DATA(state) {
-            return state.value
+            return state.movieFilteredList
         }
     }
-    // clearMessageAction() {
-    //     this.state.movieFilteredList = '';
-    // },
-    // setMessageAction(newValue) {
-    //     this.state.message = newValue;
-    // },
 }
