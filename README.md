@@ -1,4 +1,4 @@
-# CinemaFinderApp
+# Movie Finder App
 
 ## Project setup
 ```
@@ -7,6 +7,7 @@ yarn install
 
 ### Compiles and hot-reloads for development
 ```
+json-server --watch db.json
 yarn serve
 ```
 

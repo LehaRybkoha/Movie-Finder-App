@@ -57,6 +57,7 @@
         margin: 0 auto;
         &__list {
             display: flex;
+            position: relative;
             flex-wrap: wrap;
             justify-content: space-around;
         }
