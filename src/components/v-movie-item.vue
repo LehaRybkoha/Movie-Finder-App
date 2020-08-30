@@ -70,11 +70,14 @@
         }
     }
     .open-item {
-        position: fixed;
-        background-color: rgba(255, 255, 255, 0.8);
-        z-index: 10;
+      position: fixed;
+      background-color: rgba(255, 255, 255, 0.8);
+      z-index: 10;
+      left: 50%;
+      margin-left: -200px;
     }
     .open-img {
-        width: 400px;
+      width: 400px;
+      height: fit-content;
     }
 </style>
