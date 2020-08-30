@@ -17,7 +17,8 @@
 
 <style>
   body {
-   font-family: Arial;
+    font-family: Arial;
+    background: rgba(1,1,1, 0.1);
  }
   li {
     list-style: none;

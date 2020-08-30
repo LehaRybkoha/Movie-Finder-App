@@ -6,7 +6,7 @@ export default {
     },
     actions: {
         GET_MOVIES_FROM_API({commit}) {
-            return axios('https://kinopoiskapiunofficial.tech/api/v2.1/films/top?type=BEST_FILMS_LIST&page=10&listId=1', {
+            return axios('https://kinopoiskapiunofficial.tech/api/v2.1/films/top?type=BEST_FILMS_LIST&listId=1', {
                 method: "GET",
                 headers: {
                     'accept': 'application/json',

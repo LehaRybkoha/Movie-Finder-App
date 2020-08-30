@@ -1,8 +1,9 @@
 <template>
     <li @click="toggleItem" ref="movie__item" class="movie__item">
-        <h2 class="movie__item-title">{{ movie_data.nameRu }}</h2>
-        <img ref="movie__item-img" :src="movie_data.posterUrlPreview" alt="" class="movie__item-img">
-        <p class="movie__item-year">{{ movie_data.year }}</p>
+      <h2 class="movie__item-title">{{ movie_data.nameRu }}</h2>
+      <img ref="movie__item-img" :src="movie_data.posterUrlPreview" alt="" class="movie__item-img">
+      <p class="movie__item-rating">Rating: <span class="movie__item-rating--count">{{ movie_data.rating }}</span></p>
+      <p class="movie__item-year">Year: {{ movie_data.year }}</p>
     </li>
 </template>
 
@@ -60,12 +61,17 @@
               max-width: 220px;
               margin: 20px auto;
             }
-            &-year {
+          &-rating {
+            &--count {
+              color: #ff0000;
+            }
+          }
+            &-year, &-rating {
                 text-align: center;
             }
             &-img {
-                width: 220px;
-                height: 330px;
+              width: 220px;
+              height: 330px;
             }
         }
     }
@@ -75,6 +81,7 @@
       z-index: 10;
       left: 50%;
       margin-left: -200px;
+      margin-top: -5%;
     }
     .open-img {
       width: 400px;
