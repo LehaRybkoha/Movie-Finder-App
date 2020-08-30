@@ -3,7 +3,7 @@
         <ul class="movie__list">
             <v-movie-item
                     v-for="movie in filteredList"
-                    :key="movie.id"
+                    :key="movie.filmId"
                     :movie_data="movie"
             />
         </ul>
@@ -31,7 +31,7 @@
                 let movie = this.movieFilteredList;
                 return this.MOVIES.filter(function (elem) {
                     if (movie === '') return true;
-                    else return elem.title.toLowerCase().indexOf(movie.toLowerCase()) > -1;
+                    else return elem.nameRu.toLowerCase().indexOf(movie.toLowerCase()) > -1;
                 })
             }
         },
@@ -59,7 +59,7 @@
             display: flex;
             position: relative;
             flex-wrap: wrap;
-            justify-content: space-around;
+            justify-content: space-between;
         }
     }
 </style>

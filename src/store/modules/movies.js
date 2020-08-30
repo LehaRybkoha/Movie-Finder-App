@@ -6,11 +6,16 @@ export default {
     },
     actions: {
         GET_MOVIES_FROM_API({commit}) {
-            return axios('http://localhost:3000/movies', {
-                method: "GET"
+            return axios('https://kinopoiskapiunofficial.tech/api/v2.1/films/top?type=BEST_FILMS_LIST&page=1&listId=1', {
+                method: "GET",
+                headers: {
+                    'accept': 'application/json',
+                    'X-API-KEY': '4aaa82c7-2c53-40cc-8205-3719863a0373'
+                }
             })
                 .then((movies) => {
-                    commit('SET_MOVIES_TO_STATE', movies.data);
+                    commit('SET_MOVIES_TO_STATE', movies.data.films);
+                    console.log(movies.data.films)
                     return movies;
                 })
                 .catch((error) => {

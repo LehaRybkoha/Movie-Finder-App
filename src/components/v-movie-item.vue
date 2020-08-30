@@ -1,7 +1,7 @@
 <template>
     <li @click="toggleItem" ref="movie__item" class="movie__item">
-        <h2 class="movie__item-title">{{ movie_data.title }}</h2>
-        <img ref="movie__item-img" :src="require('../assets/images/' + movie_data.image)" alt="" class="movie__item-img">
+        <h2 class="movie__item-title">{{ movie_data.nameRu }}</h2>
+        <img ref="movie__item-img" :src="movie_data.posterUrlPreview" alt="" class="movie__item-img">
         <p class="movie__item-year">{{ movie_data.year }}</p>
     </li>
 </template>
@@ -52,14 +52,20 @@
         &__item {
             margin: 10px;
             cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-end;
             &-title {
-                text-align: center;
+              text-align: center;
+              max-width: 220px;
+              margin: 20px auto;
             }
             &-year {
                 text-align: center;
             }
             &-img {
                 width: 220px;
+                height: 330px;
             }
         }
     }
