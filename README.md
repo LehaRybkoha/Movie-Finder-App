@@ -2,23 +2,23 @@
 
 ## Project setup
 ```
-yarn install
+yarn run install
 ```
 
 ### Compiles and hot-reloads for development
 ```
 json-server --watch db.json
-yarn serve
+yarn run serve
 ```
 
 ### Compiles and minifies for production
 ```
-yarn build
+yarn run build
 ```
 
 ### Lints and fixes files
 ```
-yarn lint
+yarn run lint
 ```
 
 ### Customize configuration
