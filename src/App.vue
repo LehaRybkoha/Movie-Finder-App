@@ -1,16 +1,24 @@
 <template>
   <div id="app">
+    <v-preloader />
     <v-main-wrapper />
   </div>
 </template>
 
 <script>
   import vMainWrapper from './components/v-main-wrapper'
+  import vPreloader from './components/v-preloader'
 
   export default {
     name: 'app',
+    data() {
+      return {
+
+      }
+    },
     components: {
-      vMainWrapper
+      vMainWrapper,
+      vPreloader
     }
   }
 </script>

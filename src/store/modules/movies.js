@@ -5,7 +5,7 @@ export default {
         movies: []
     },
     actions: {
-        GET_MOVIES_FROM_API({commit}) {
+      GET_MOVIES_FROM_API({commit}) {
             return axios('https://kinopoiskapiunofficial.tech/api/v2.1/films/top?type=BEST_FILMS_LIST&listId=1', {
                 method: "GET",
                 headers: {
@@ -27,11 +27,11 @@ export default {
     mutations: {
         SET_MOVIES_TO_STATE: (state, movies) => {
             state.movies = movies;
-        },
+        }
     },
     getters: {
         MOVIES(state) {
             return state.movies;
-        },
+        }
     }
 }

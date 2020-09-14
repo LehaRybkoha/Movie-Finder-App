@@ -59,7 +59,8 @@
             display: flex;
             position: relative;
             flex-wrap: wrap;
-            justify-content: space-between;
+            justify-content: space-around;
+            padding: 0;
         }
     }
 </style>
